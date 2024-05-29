@@ -40,13 +40,21 @@ function init() {
   sun = new THREE.Mesh(sunGeometry, sunMaterial);
   scene.add(sun);
 
+  // Lighting
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+  scene.add(ambientLight);
+
+  const pointLight = new THREE.PointLight(0xffffff, 1);
+  pointLight.position.set(10, 10, 10);
+  scene.add(pointLight);
+
   // STL Loader
   loader = new THREE.STLLoader();
 
   // Load objects
   objectData.forEach((data, index) => {
     loader.load(data.path, (geometry) => {
-      const material = new THREE.MeshNormalMaterial();
+      const material = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
       const object = new THREE.Mesh(geometry, material);
       object.scale.set(data.size, data.size, data.size);
       object.position.x = data.distance;
