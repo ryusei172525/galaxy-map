@@ -3,10 +3,10 @@ let sun,
   objects = [];
 
 const objectData = [
-  { path: "apple_model.stl", size: 0.2, distance: 2 },
-  { path: "apple_model.stl", size: 0.3, distance: 4 },
-  { path: "apple_model.stl", size: 0.4, distance: 6 },
-  { path: "apple_model.stl", size: 0.5, distance: 8 },
+  { path: "apple_model.stl", size: 0.01, distance: 2 },
+  // { path: "apple_model.stl", size: 0.3, distance: 4 },
+  // { path: "apple_model.stl", size: 0.4, distance: 6 },
+  // { path: "apple_model.stl", size: 0.5, distance: 8 },
 ];
 
 init();
